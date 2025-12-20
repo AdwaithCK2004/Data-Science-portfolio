@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adwaith C K | Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#0f0f0f;color:#eee;overflow-x:hidden;}
+
+/* HERO */
+.hero{
+    position:relative;
+    background: linear-gradient(135deg,#222,#111);
+    color:#fff;
+    text-align:center;
+    padding:100px 10%;
+    overflow:hidden;
+}
+.hero::after{
+    content:''; position:absolute; top:0; left:0;
+    width:100%; height:100%;
+    background:url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
+    opacity:0.1; pointer-events:none;
+}
+.profile-pic{
+    width:180px;height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #00f0ff;
+    margin-bottom:20px;
+    transition:.5s;
+}
+.profile-pic:hover{transform:scale(1.15) rotate(5deg);}
+.hero h1{font-size:3rem;margin-bottom:10px;}
+.hero p{font-size:1.2rem; min-height:32px;}
+.hero-links a{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    background:linear-gradient(135deg,#00f0ff,#00bcd4);
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.4s;
+}
+.hero-links a:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 5px 20px #00bcd4;
+}
+
+/* NAVIGATION */
+nav{
+    background:#111;
+    padding:16px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:20;
+    box-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+nav a{
+    color:#fff;
+    margin:0 18px;
+    text-decoration:none;
+    font-weight:600;
+    position:relative;
+}
+nav a::after{
+    content:''; position:absolute; left:0; bottom:-5px;
+    width:0; height:2px;
+    background:#00f0ff;
+    transition:.4s;
+}
+nav a:hover::after{width:100%;}
+
+/* SECTION */
+section{padding:80px 10%; position:relative;}
+.section-box{
+    background:#111;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,.6);
+    margin-bottom:40px;
+    opacity:0;
+    transform:translateY(60px);
+    transition:.8s;
+}
+.section-box.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.section-title{text-align:center;font-size:2.5rem;margin-bottom:25px;color:#00f0ff;}
+
+/* SKILLS */
+.skills-category{margin-bottom:30px;}
+.skills-category h3{text-align:center;margin-bottom:12px;color:#fff;}
+.skills-category ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+}
+.skills-category li{
+    background:#00bcd4;
+    color:#fff;
+    padding:12px 25px;
+    margin:8px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.4s;
+}
+.skills-category li:hover{
+    transform:scale(1.15) rotate(-2deg);
+    background:#00f0ff;
+    box-shadow:0 8px 25px rgba(0,255,255,.5);
+}
+
+/* EXPERIENCE */
+.experience-item{
+    border-left:4px solid #00f0ff;
+    padding-left:18px;
+    margin-bottom:28px;
+}
+.experience-item h3{color:#00f0ff;}
+.experience-item span{font-size:.9rem;color:#aaa;}
+
+/* PROJECTS */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+}
+.project-card{
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,255,255,.2);
+    transition:.5s;
+    position:relative;
+}
+.project-card:hover{
+    transform:translateY(-10px) rotate(-1deg);
+    box-shadow:0 15px 30px rgba(0,255,255,.5);
+}
+.project-card h3{color:#00f0ff;margin-bottom:12px;}
+.project-card p{font-size:.95rem;margin-bottom:15px;color:#ddd;}
+.project-card a{
+    text-decoration:none;
+    padding:10px 20px;
+    background:#00f0ff;
+    color:#111;
+    border-radius:25px;
+    font-weight:bold;
+    transition:.3s;
+}
+.project-card a:hover{
+    background:#00bcd4;
+    color:#fff;
+}
+
+/* CONTACT */
+.contact-list{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:22px;
+}
+.contact-list li{
+    background:#00bcd4;
+    color:#fff;
+    padding:14px 22px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.4s;
+}
+.contact-list li:hover{
+    background:#00f0ff;
+    transform:scale(1.15);
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #222;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){section{padding:50px 6%;}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <img src="C:/Users/adwai/OneDrive/Pictures/my/IMG-20250626-WA0010.jpg" class="profile-pic">
+    <h1>Adwaith C K</h1>
+    <p id="typing"></p>
+    <div class="hero-links">
+        <a href="https://drive.google.com/file/d/1vuMo92FJoWdMxHZiRJBW9zFoc4gM_OXE/view" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/adwaith-c-k" target="_blank">LinkedIn</a>
+        <a href="https://github.com/AdwaithCK2004" target="_blank">GitHub</a>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="section-box">
+<h2 class="section-title">About Me</h2>
+<p>I am a passionate Data Science and AI enthusiast with expertise in Python, Machine Learning, Deep Learning, and Computer Vision. I enjoy solving real-world problems with data-driven solutions.</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="section-box">
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills-category">
+<h3>Programming</h3>
+<ul><li>Python</li><li>HTML</li><li>CSS</li></ul>
+</div>
+
+<div class="skills-category">
+<h3>Data Science & AI</h3>
+<ul><li>Machine Learning</li><li>Deep Learning</li><li>NLP</li><li>EDA</li><li>Computer Vision</li></ul>
+</div>
+
+<div class="skills-category">
+<h3>Tools</h3>
+<ul><li>Git</li><li>GitHub</li><li>Power BI</li><li>Excel</li><li>VS Code</li></ul>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="section-box">
+<h2 class="section-title">Experience</h2>
+
+<div class="experience-item">
+<h3>Data Science Intern – Luminar Technolab</h3>
+<span>May 2025 – Present</span>
+<p>ML models, data analysis, dashboards, Python & AI solutions.</p>
+</div>
+
+<div class="experience-item">
+<h3>Python Developer Intern – RISSE Technologies</h3>
+<span>Jun 2024 – Feb 2025</span>
+<p>Developed MEALS MATE app using Django, APIs & database integration.</p>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="section-box">
+<h2 class="section-title">Projects</h2>
+
+<div class="project-grid">
+    <div class="project-card">
+        <h3>DeliverAI</h3>
+        <p>Food delivery time prediction using ML regression models.</p>
+        <a href="https://github.com/AdwaithCK2004/DeliverAI-Intelligent-Food-Delivery-Time-Forecasting" target="_blank">View</a>
+    </div>
+    <div class="project-card">
+        <h3>Hand Gesture Virtual Mouse</h3>
+        <p>Control mouse using hand gestures with OpenCV & MediaPipe.</p>
+        <a href="https://github.com/AdwaithCK2004/Hand-Gesture-Virtual-Mouse" target="_blank">View</a>
+    </div>
+    <div class="project-card">
+        <h3>Face Recognition Attendance</h3>
+        <p>Real-time attendance system using face recognition.</p>
+        <a href="https://github.com/AdwaithCK2004/Face-Recognition-Attendance" target="_blank">View</a>
+    </div>
+    <div class="project-card">
+        <h3>Emotion Detection System</h3>
+        <p>Detect facial emotions using deep learning models.</p>
+        <a href="https://github.com/AdwaithCK2004/Emotion-Detection-System" target="_blank">View</a>
+    </div>
+    <div class="project-card">
+        <h3>Student Performance Prediction</h3>
+        <p>Predict academic performance using ML algorithms.</p>
+        <a href="https://github.com/AdwaithCK2004/Student-Performance-Prediction" target="_blank">View</a>
+    </div>
+    <div class="project-card">
+        <h3>Health Insurance Premium Prediction</h3>
+        <p>Regression-based insurance premium estimation.</p>
+        <a href="https://github.com/AdwaithCK2004/Health-Insurance-Premium-Prediction" target="_blank">View</a>
+    </div>
+</div>
+
+<!-- View All Projects Button -->
+<div style="text-align:center; margin-top:30px;">
+    <a href="https://github.com/AdwaithCK2004/Data-Science-portfolio/tree/main/Projects" target="_blank" 
+       style="display:inline-block; padding:14px 28px; background:linear-gradient(135deg,#00f0ff,#00bcd4); 
+              color:#fff; text-decoration:none; border-radius:50px; font-weight:bold; transition:.4s;">
+        View All Projects
+    </a>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<div class="section-box">
+<h2 class="section-title">Education</h2>
+<p><strong>Bachelor of Computer Science</strong><br>RSM SNDP College, Koyilandy<br>2022 – 2025</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="section-box">
+<h2 class="section-title">Contact Me</h2>
+<ul class="contact-list">
+<li><a href="mailto:adwaithck935@gmail.com">Email</a></li>
+<li><a href="https://www.linkedin.com/in/adwaith-c-k" target="_blank">LinkedIn</a></li>
+<li><a href="https://github.com/AdwaithCK2004" target="_blank">GitHub</a></li>
+</ul>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Adwaith C K | All Rights Reserved</p>
+</footer>
+
+<script>
+// Typing effect
+const text=" Data Science Intern | Machine Learning | Deep Learning | AI Enthusiast";
+let i=0;
+function typeEffect(){
+    if(i<text.length){
+        document.getElementById("typing").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(typeEffect,50);
+    }
+}
+window.onload=typeEffect;
+
+// Scroll animation
+const boxes=document.querySelectorAll('.section-box');
+window.addEventListener('scroll',()=>{
+    boxes.forEach(box=>{
+        const top=box.getBoundingClientRect().top;
+        if(top<window.innerHeight-100){
+            box.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
