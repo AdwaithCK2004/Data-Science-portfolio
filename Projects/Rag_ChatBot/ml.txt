@@ -1,0 +1,97 @@
+Machine Learning
+
+Machine Learning (ML) is a branch of Artificial Intelligence that enables computers to learn from data and make predictions or decisions without being explicitly programmed. Instead of writing fixed rules for every task, machine learning algorithms identify patterns in data and improve their performance automatically over time.
+
+Definition
+
+Machine Learning is a technique that allows systems to learn from data, recognize patterns, and make decisions with minimal human intervention.
+
+How Machine Learning Works
+
+The basic process of machine learning involves:
+
+Data Collection – Gathering relevant data (text, images, numbers, etc.).
+
+Data Preprocessing – Cleaning and organizing the data.
+
+Model Training – Feeding data into a machine learning algorithm so it can learn patterns.
+
+Evaluation – Testing the model’s performance.
+
+Prediction – Using the trained model to make predictions on new data.
+
+The more quality data a model receives, the better it performs.
+
+Types of Machine Learning
+1. Supervised Learning
+
+In supervised learning, the model is trained using labeled data (input and correct output are known).
+Examples:
+
+House price prediction
+
+Email spam detection
+
+Common algorithms:
+
+Linear Regression
+
+Decision Trees
+
+Support Vector Machines
+
+2. Unsupervised Learning
+
+In unsupervised learning, the model works with unlabeled data and finds hidden patterns.
+Examples:
+
+Customer segmentation
+
+Market analysis
+
+Common algorithms:
+
+K-Means Clustering
+
+Hierarchical Clustering
+
+3. Reinforcement Learning
+
+In reinforcement learning, the model learns by interacting with an environment using rewards and penalties.
+Examples:
+
+Game-playing AI
+
+Robotics
+
+Self-driving cars
+
+Applications of Machine Learning
+
+Machine learning is widely used in real life:
+
+Recommendation systems (Netflix, Amazon)
+
+Voice assistants
+
+Fraud detection
+
+Medical diagnosis
+
+Image and speech recognition
+
+Major technology companies like Google, Amazon, and Microsoft use machine learning in many of their products and services.
+
+Advantages of Machine Learning
+
+Automates decision-making
+
+Handles large volumes of data
+
+Improves accuracy over time
+
+Reduces human effort
+
+Conclusion
+
+Machine Learning is a powerful technology that allows computers to learn from data and improve automatically without being explicitly programmed. It plays a major role in modern artificial intelligence systems and continues to transform industries such as healthcare, finance, retail, and transportation.
